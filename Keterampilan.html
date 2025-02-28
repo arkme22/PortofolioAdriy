@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keterampilan - ADRIY ARFIY FADIL</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+            color: #343a40;
+        }
+
+        header {
+            background: linear-gradient(90deg, #333, #007BFF);
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #ffcc00;
+        }
+
+        main {
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .skill-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .skill-item {
+            display: flex;
+            align-items: center;
+            padding: 20px;
+            margin-bottom: 15px;
+            background-color: #e9ecef;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.8s forwards;
+        }
+
+        .skill-item i {
+            font-size: 2em;
+            margin-right: 20px;
+            color: #007BFF;
+        }
+
+        .skill-item .skill-info {
+            flex-grow: 1;
+            text-align: left;
+        }
+
+        .skill-item .progress-bar {
+            width: 100px;
+            height: 10px;
+            background-color: #d1d5db;
+            border-radius: 5px;
+            margin-left: 20px;
+            overflow: hidden;
+        }
+
+        .skill-item .progress {
+            height: 100%;
+            background-color: #007BFF;
+            border-radius: 5px;
+        }
+
+        footer {
+            background: #333;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        /* Efek Animasi */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="beranda.html">Beranda</a>
+            <a href="tentang.html">Tentang</a>
+            <a href="portofolio.html">Portofolio</a>
+            <a href="pendidikan.html">Pendidikan</a>
+            <a href="penghargaan.html">Penghargaan</a>
+            <a href="keterampilan.html">Keterampilan</a>
+            <a href="rekomendasi.html">Rekomendasi</a>
+            <a href="galeri.html">Galeri</a>
+            <a href="kontak.html">Kontak</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <h2>Keterampilan</h2>
+            <ul class="skill-list">
+                <li class="skill-item" style="animation-delay: 0.2s;">
+                    <i class="fas fa-cogs"></i>
+                    <div class="skill-info">
+                        <h3>Manajemen Produksi</h3>
+                        <p>Pengalaman dalam mengelola proses produksi secara efisien.</p>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 80%;"></div>
+                    </div>
+                </li>
+                <li class="skill-item" style="animation-delay: 0.4s;">
+                    <i class="fas fa-calendar-alt"></i>
+                    <div class="skill-info">
+                        <h3>Penjadwalan Produksi</h3>
+                        <p>Mampu menyusun dan mengelola jadwal produksi dengan baik.</p>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 75%;"></div>
+                    </div>
+                </li>
+                <li class="skill-item" style="animation-delay: 0.6s;">
+                    <i class="fas fa-clipboard-list"></i>
+                    <div class="skill-info">
+                        <h3>Pencatatan Barang Masuk</h3>
+                        <p>Terampil dalam mencatat dan mengelola data stok barang.</p>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 90%;"></div>
+                    </div>
+                </li>
+                <li class="skill-item" style="animation-delay: 0.8s;">
+                    <i class="fas fa-truck-loading"></i>
+                    <div class="skill-info">
+                        <h3>Bongkar Muat Barang</h3>
+                        <p>Memiliki pengalaman dalam operasi bongkar muat barang.</p>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 85%;"></div>
+                    </div>
+                </li>
+                <li class="skill-item" style="animation-delay: 1s;">
+                    <i class="fas fa-route"></i>
+                    <div class="skill-info">
+                        <h3>Logistik</h3>
+                        <p>Memahami proses logistik secara mendalam Baik itu Berupa barang konstruksi,Batubara,Kokas,Asam Sulfat.</p>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 110%;"></div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </main>
+
+    <footer>
+        Hak Cipta © 2025 | Portofolio Saya
+    </footer>
+</body>
+</html>

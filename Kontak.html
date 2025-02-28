@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontak - ADRIY ARFIY FADIL</title>
+    <style>
+        /* Reset CSS */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: white;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        /* Navigasi */
+        nav {
+            background: linear-gradient(to right, #000066, #0033cc);
+            padding: 10px;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        nav ul li {
+            margin: 5px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 8px 12px;
+            display: inline-block;
+            transition: 0.3s;
+        }
+        nav ul li a:hover, .active {
+            background-color: white;
+            color: #0033cc;
+            border-radius: 5px;
+        }
+
+        /* Container */
+        .container {
+            max-width: 600px;
+            margin: 30px auto;
+            padding: 20px;
+            background: #f8f8f8;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Kotak Kontak */
+        .kontak-box {
+            background-color: #ddd;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 8px;
+            transition: 0.3s;
+        }
+        .kontak-box:hover {
+            background-color: #ccc;
+        }
+
+        /* Animasi Saat Klik */
+        .animasi-hover {
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .animasi-hover:hover {
+            color: #ff6600;
+            transform: scale(1.05);
+        }
+
+        /* Logo Bank */
+        .bank-logo {
+            width: 50px;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Menu Navigasi -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="tentang.html">Tentang</a></li>
+            <li><a href="portofolio.html">Portofolio</a></li>
+            <li><a href="pendidikan.html">Pendidikan</a></li>
+            <li><a href="penghargaan.html">Penghargaan</a></li>
+            <li><a href="keterampilan.html">Keterampilan</a></li>
+            <li><a href="rekomendasi.html">Rekomendasi</a></li>
+            <li><a href="galeri.html">Galeri</a></li>
+            <li><a href="kontak.html" class="active">Kontak</a></li>
+        </ul>
+    </nav>
+
+    <!-- Konten Kontak -->
+    <div class="container">
+        <h2>Kontak Saya</h2>
+        
+        <!-- Informasi Kontak -->
+        <div class="kontak-box">
+            <h3>Nomor Telepon</h3>
+            <p class="animasi-hover" onclick="copyToClipboard(this)">📞 082217431740</p>
+            <p class="animasi-hover" onclick="copyToClipboard(this)">📞 081234567890 (Ayah)</p>
+            <p class="animasi-hover" onclick="copyToClipboard(this)">📞 089876543210 (Ibu)</p>
+            <p class="animasi-hover" onclick="copyToClipboard(this)">📞 087654321098 (Adik)</p>
+        </div>
+
+        <div class="kontak-box">
+            <h3>Email</h3>
+            <p class="animasi-hover" onclick="copyToClipboard(this)">📧 adriy@example.com</p>
+        </div>
+
+        <!-- Nomor Rekening -->
+        <div class="kontak-box">
+            <h3>Nomor Rekening</h3>
+            <img src="bri-logo.png" alt="Logo BRI" class="bank-logo">
+            <p class="animasi-hover" onclick="copyToClipboard(this)">🏦 768601072018535</p>
+        </div>
+
+        <!-- Sosial Media -->
+        <div class="kontak-box">
+            <h3>Sosial Media</h3>
+            <p><a href="https://facebook.com/username" target="_blank">🌍 Facebook</a></p>
+            <p><a href="https://x.com/username" target="_blank">🌍 X (Twitter)</a></p>
+            <p><a href="https://youtube.com/username" target="_blank">🌍 YouTube</a></p>
+            <p><a href="https://tiktok.com/@username" target="_blank">🌍 TikTok</a></p>
+        </div>
+    </div>
+
+    <script>
+        function copyToClipboard(element) {
+            navigator.clipboard.writeText(element.innerText);
+            element.style.color = "blue"; 
+            setTimeout(() => { element.style.color = ""; }, 500);
+        }
+    </script>
+
+</body>
+</html>

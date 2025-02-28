@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail Proyek</title>
+    <style>
+        /* Efek smooth saat halaman dimuat */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            text-align: center;
+            animation: fadeIn 1.2s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .container {
+            width: 90%;
+            max-width: 850px;
+            margin: 30px auto;
+            background: white;
+            padding: 25px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+            border-radius: 10px;
+            overflow: hidden;
+            animation: slideUp 1s ease-out;
+        }
+
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(25px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Efek Parallax */
+        .parallax {
+            height: 250px;
+            background: url('gambar-proyek.jpg') center/cover no-repeat;
+            position: relative;
+            border-radius: 10px;
+            transition: transform 0.6s ease-out;
+        }
+
+        /* Efek 3D Hover */
+        .gambar-container {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            perspective: 1000px;
+        }
+
+        .gambar-proyek {
+            width: 100%;
+            border-radius: 10px;
+            transition: transform 0.5s ease-out, opacity 0.4s ease, filter 0.5s ease;
+            cursor: pointer;
+        }
+
+        .gambar-container:hover .gambar-proyek {
+            transform: scale(1.1) rotateY(10deg);
+            opacity: 0.9;
+            filter: brightness(1.2);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+        }
+
+        /* Efek Slide-in pada Deskripsi */
+        .deskripsi {
+            margin-top: 20px;
+            font-size: 17px;
+            line-height: 1.8;
+            text-align: justify;
+            padding: 20px;
+            background: rgba(200, 200, 200, 0.6);
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            opacity: 0;
+            transform: translateX(-50px);
+            animation: slideIn 1.5s ease-out forwards;
+        }
+
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateX(-50px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+
+        /* Tombol kembali dengan efek interaktif */
+        .tombol-kembali {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 35px;
+            background: #007BFF;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: bold;
+            transition: background 0.4s ease, transform 0.3s ease, box-shadow 0.3s ease;
+            animation: fadeIn 1.8s ease-out;
+        }
+
+        .tombol-kembali:hover {
+            background: #0056b3;
+            transform: scale(1.08);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Efek Parallax saat scroll */
+        @media (min-width: 600px) {
+            .parallax {
+                height: 350px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="parallax"></div> <!-- Efek Parallax -->
+        <div class="gambar-container">
+            <img src="gambar-proyek.jpg" alt="Proyek Saya" class="gambar-proyek">
+        </div>
+        <div class="deskripsi">
+            <h2>Catat Barang Masuk Konstruksi</h2>
+            <p>Mencatat Barang Masuk dari Jetty di kirim ke DCI dan mencatat laporan pengiriman.</p>
+        </div>
+        <a href="portofolio.html" class="tombol-kembali">Kembali ke Portofolio</a>
+    </div>
+    <div class="container">
+        <div class="parallax"></div> <!-- Efek Parallax -->
+        <div class="gambar-container">
+            <img src="gambar-proyek.jpg" alt="Proyek Saya" class="gambar-proyek">
+        </div>
+        <div class="deskripsi">
+            <h2>Periksa Barang Masuk</h2>
+            <p>Memeriksa barang dan mecocokkan kode barang yang di kirim serta memeriksa jika ada kerusakan barang.</p>        <a href="portofolio.html" class="tombol-kembali">Kembali ke Portofolio</a>
+    </div>
+
+        </div>
+        
+       <div class="container">
+        <div class="parallax"></div> <!-- Efek Parallax -->
+        <div class="gambar-container">
+            <img src="gambar-proyek.jpg" alt="Proyek Saya" class="gambar-proyek">
+        </div>
+        <div class="deskripsi">
+            <h2>Bongkar Muat Barang</h2>
+            <p>Melakukan pembongkaran barang dengan hati-hati agar barang tidak rusak serta memperhatikan posisi atau tempat untuk menyimpan barang.</p>
+        </div>
+        <a href="portofolio.html" class="tombol-kembali">Kembali ke Portofolio</a>
+    </div>
+
+</body>
+</html>

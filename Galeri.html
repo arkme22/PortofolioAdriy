@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeri - ADRIY ARFIY FADIL</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            color: #343a40;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        header {
+            background: linear-gradient(90deg, #333, #007BFF);
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        nav {
+            margin-top: 10px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #ffcc00;
+        }
+
+        main {
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+            cursor: pointer;
+            opacity: 0;
+            animation: fadeInImage 0.8s ease-in-out forwards;
+        }
+
+        @keyframes fadeInImage {
+            from { opacity: 0; transform: scale(0.9); }
+            to { opacity: 1; transform: scale(1); }
+        }
+
+        .gallery img:hover {
+            transform: scale(1.07) rotate(1deg);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .gallery img:active {
+            animation: shake 0.2s ease-in-out;
+        }
+
+        @keyframes shake {
+            0% { transform: translateX(0); }
+            25% { transform: translateX(-3px); }
+            50% { transform: translateX(3px); }
+            75% { transform: translateX(-3px); }
+            100% { transform: translateX(0); }
+        }
+
+        .gallery img.clicked {
+            filter: hue-rotate(180deg) contrast(1.2) brightness(1.1);
+            transition: filter 0.5s ease;
+        }
+
+        footer {
+            background: #333;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="beranda.html">Beranda</a>
+            <a href="tentang.html">Tentang</a>
+            <a href="portofolio.html">Portofolio</a>
+            <a href="pendidikan.html">Pendidikan</a>
+            <a href="penghargaan.html">Penghargaan</a>
+            <a href="keterampilan.html">Keterampilan</a>
+            <a href="rekomendasi.html">Rekomendasi</a>
+            <a href="galeri.html">Galeri</a>
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+            <h2>Galeri</h2>
+            <p>Koleksi gambar dan foto saya.</p>
+
+            <div class="gallery">
+                <img src="img1.jpg" alt="Gambar 1">
+                <img src="img2.jpg" alt="Gambar 2">
+                <img src="img3.jpg" alt="Gambar 3">
+                <img src="img4.jpg" alt="Gambar 4">
+                <img src="img5.jpg" alt="Gambar 5">
+                <img src="img6.jpg" alt="Gambar 6">
+            </div>
+        </div>
+    </main>
+    <footer>
+        Hak Cipta © 2025 | Portofolio Saya
+    </footer>
+
+    <script>
+        document.querySelectorAll('.gallery img').forEach(img => {
+            img.addEventListener('click', function() {
+                this.classList.toggle('clicked');
+            });
+        });
+    </script>
+</body>
+</html>
